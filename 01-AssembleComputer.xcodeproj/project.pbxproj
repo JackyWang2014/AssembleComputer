@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FC00ABC91C0F07550029AFCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABC81C0F07550029AFCC /* main.m */; };
+		FC00ABD41C0F0AA20029AFCC /* WQTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD31C0F0AA20029AFCC /* WQTRequest.m */; };
+		FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD61C0F0E2E0029AFCC /* WQTResourceList.m */; };
+		FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */; };
+		FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		FC00ABC51C0F07550029AFCC /* 01-AssembleComputer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "01-AssembleComputer"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC00ABC81C0F07550029AFCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC00ABD21C0F0AA20029AFCC /* WQTRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTRequest.h; sourceTree = "<group>"; };
+		FC00ABD31C0F0AA20029AFCC /* WQTRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTRequest.m; sourceTree = "<group>"; };
+		FC00ABD51C0F0E2E0029AFCC /* WQTResourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTResourceList.h; sourceTree = "<group>"; };
+		FC00ABD61C0F0E2E0029AFCC /* WQTResourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTResourceList.m; sourceTree = "<group>"; };
+		FC00ABD81C0F0EB70029AFCC /* WQTResourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTResourceItem.h; sourceTree = "<group>"; };
+		FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTResourceItem.m; sourceTree = "<group>"; };
+		FC00ABDC1C0F104E0029AFCC /* WQTDeviceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTDeviceItem.h; sourceTree = "<group>"; };
+		FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTDeviceItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,49 @@
 		FC00ABC71C0F07550029AFCC /* 01-AssembleComputer */ = {
 			isa = PBXGroup;
 			children = (
+				FC00ABDB1C0F102E0029AFCC /* 通用数据模型 */,
+				FC00ABD11C0F0A800029AFCC /* 自定义类 */,
+				FC00ABD01C0F0A750029AFCC /* 配件选取页面 */,
+				FC00ABCF1C0F0A600029AFCC /* 配置清单页面 */,
 				FC00ABC81C0F07550029AFCC /* main.m */,
 			);
 			path = "01-AssembleComputer";
+			sourceTree = "<group>";
+		};
+		FC00ABCF1C0F0A600029AFCC /* 配置清单页面 */ = {
+			isa = PBXGroup;
+			children = (
+				FC00ABD51C0F0E2E0029AFCC /* WQTResourceList.h */,
+				FC00ABD61C0F0E2E0029AFCC /* WQTResourceList.m */,
+				FC00ABD81C0F0EB70029AFCC /* WQTResourceItem.h */,
+				FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */,
+			);
+			name = "配置清单页面";
+			sourceTree = "<group>";
+		};
+		FC00ABD01C0F0A750029AFCC /* 配件选取页面 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "配件选取页面";
+			sourceTree = "<group>";
+		};
+		FC00ABD11C0F0A800029AFCC /* 自定义类 */ = {
+			isa = PBXGroup;
+			children = (
+				FC00ABD21C0F0AA20029AFCC /* WQTRequest.h */,
+				FC00ABD31C0F0AA20029AFCC /* WQTRequest.m */,
+			);
+			name = "自定义类";
+			sourceTree = "<group>";
+		};
+		FC00ABDB1C0F102E0029AFCC /* 通用数据模型 */ = {
+			isa = PBXGroup;
+			children = (
+				FC00ABDC1C0F104E0029AFCC /* WQTDeviceItem.h */,
+				FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */,
+			);
+			name = "通用数据模型";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC00ABD41C0F0AA20029AFCC /* WQTRequest.m in Sources */,
+				FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */,
 				FC00ABC91C0F07550029AFCC /* main.m in Sources */,
+				FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */,
+				FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

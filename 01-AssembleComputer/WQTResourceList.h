@@ -1,5 +1,5 @@
 //
-//  main.m
+//  WQTResourceList.h
 //  01-AssembleComputer
 //
 //  Created by 王亓泰 on 15/12/2.
@@ -7,13 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+/**下载配置清单,管理配置清单,显示配置清单,操作配置清单 */
+@interface WQTResourceList : NSObject
 
 
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
-    return 0;
-}
+@end
