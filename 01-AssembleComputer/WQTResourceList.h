@@ -10,6 +10,7 @@
 /**下载配置清单,管理配置清单,显示配置清单,操作配置清单 */
 @interface WQTResourceList : NSObject
 
-
+// 页面运行 刷新
+- (void)refresh;
 
 @end

@@ -7,18 +7,10 @@
 //
 
 #import "WQTResourceItem.h"
-
+#import "Header.h"
 @implementation WQTResourceItem
 - (float)totalPrice {
-    NSArray * propertyNames = @[@"cpu",
-                                @"memory",
-                                @"mainBoard",
-                              @"graphicsCard",
-                                @"voiceCard",
-                                @"box",
-                                @"hardDisk",
-                                @"keyboard",
-                                @"displayer"];
+    NSArray * propertyNames = DEVICE_PROPERTY_NAMES;
     
     float totalPrice = 0;
     for (NSString * propertyName in propertyNames) {

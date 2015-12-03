@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "WQTResourceList.h"
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        WQTResourceList * resourceList = [[WQTResourceList alloc] init];
+        [resourceList refresh];
     }
     return 0;
 }

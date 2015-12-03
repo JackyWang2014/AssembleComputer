@@ -12,6 +12,8 @@
 		FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD61C0F0E2E0029AFCC /* WQTResourceList.m */; };
 		FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */; };
 		FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */; };
+		FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C341C1067EE004D86E8 /* WQTEventItem.m */; };
+		FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C371C106869004D86E8 /* WQTEventManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,11 @@
 		FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTResourceItem.m; sourceTree = "<group>"; };
 		FC00ABDC1C0F104E0029AFCC /* WQTDeviceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTDeviceItem.h; sourceTree = "<group>"; };
 		FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTDeviceItem.m; sourceTree = "<group>"; };
+		FCF94C331C1067EE004D86E8 /* WQTEventItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventItem.h; sourceTree = "<group>"; };
+		FCF94C341C1067EE004D86E8 /* WQTEventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTEventItem.m; sourceTree = "<group>"; };
+		FCF94C361C106869004D86E8 /* WQTEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventManager.h; sourceTree = "<group>"; };
+		FCF94C371C106869004D86E8 /* WQTEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTEventManager.m; sourceTree = "<group>"; };
+		FCF94C391C107531004D86E8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,11 @@
 			children = (
 				FC00ABD21C0F0AA20029AFCC /* WQTRequest.h */,
 				FC00ABD31C0F0AA20029AFCC /* WQTRequest.m */,
+				FCF94C331C1067EE004D86E8 /* WQTEventItem.h */,
+				FCF94C341C1067EE004D86E8 /* WQTEventItem.m */,
+				FCF94C361C106869004D86E8 /* WQTEventManager.h */,
+				FCF94C371C106869004D86E8 /* WQTEventManager.m */,
+				FCF94C391C107531004D86E8 /* Header.h */,
 			);
 			name = "自定义类";
 			sourceTree = "<group>";
@@ -170,8 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */,
 				FC00ABD41C0F0AA20029AFCC /* WQTRequest.m in Sources */,
 				FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */,
+				FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */,
 				FC00ABC91C0F07550029AFCC /* main.m in Sources */,
 				FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */,
 				FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */,
@@ -291,6 +305,7 @@
 				FC00ABCE1C0F07550029AFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
