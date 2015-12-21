@@ -12,6 +12,12 @@
 #import "WQTEventManager.h"
 #import "WQTEventItem.h"
 #import "Header.h"
+
+enum {
+    REFRESH, // 刷新当前配置
+    CHOOSE_DEVICE
+};
+
 @interface WQTResourceList() {
     // 当前类管理的数据模型
     WQTResourceItem * _resourceItem;
@@ -39,19 +45,19 @@
     // 搭建基础的工作体系
     [self registerEvents];
     // 主界面不退出
+    // 管理数据操作数据,将接口和后台数据结合起来
     while (1) {
         NSUInteger ctl;
-        printf("请选择操作:\n0:刷新当前页\n");
+        printf("请选择操作:\n0:刷新当前页\n1:挑选某个设备");
         scanf("%lu",&ctl);
         [_eventManager respondedEvent:ctl];
     }
-    
-    
 }
 // 注册相关事件
 - (void)registerEvents {
     // 注册第0个事件
-    [_eventManager addTarget:self action:@selector(reloadSource) event:0];
+    [_eventManager addTarget:self action:@selector(reloadSource) event:REFRESH];
+    [_eventManager addTarget:self action:@selector(chooseDevice) event:CHOOSE_DEVICE];
 //    [_eventManager respondedEvent:0];
 }
 
@@ -60,15 +66,35 @@
     NSMutableString * str = [[NSMutableString alloc] initWithString:@"{\n商品清单:\n"];
     
     NSArray * propertyNames = DEVICE_PROPERTY_NAMES;
+    
+    NSInteger i = 0;
     for (NSString * propertyName in propertyNames) {
-        [str appendFormat:@"%@:",propertyName];
+        [str appendFormat:@"[%ld]%@:",++i,[WQTTool translation:propertyName]];
         WQTDeviceItem * item = [_resourceItem performSelector:NSSelectorFromString(propertyName)];
         if (item) {
             [str appendFormat:@"%@  ￥,%@",item.name,item.price];;
+        } else {
+            [str appendString:@"(暂无设备)"];
         }
         [str appendString:@"\n"];
     }
+    [str appendFormat:@"总价:%.2f",_resourceItem.totalPrice];
+    
     NSLog(@"%@}",str);
 }
+
+#pragma mark - 选择一种设备
+// 做第二次输入,选择设备
+- (void)chooseDevice {
+    NSUInteger ctl;
+    printf("请依据设备编号选择设备:\n");
+    scanf("%lu",&ctl);
+    
+    //退出第二个界面
+    
+    
+    
+}
+
 
 @end

@@ -14,6 +14,7 @@
 		FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */; };
 		FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C341C1067EE004D86E8 /* WQTEventItem.m */; };
 		FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C371C106869004D86E8 /* WQTEventManager.m */; };
+		FCF94C3C1C107D9A004D86E8 /* WQTTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C3B1C107D9A004D86E8 /* WQTTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		FCF94C361C106869004D86E8 /* WQTEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventManager.h; sourceTree = "<group>"; };
 		FCF94C371C106869004D86E8 /* WQTEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTEventManager.m; sourceTree = "<group>"; };
 		FCF94C391C107531004D86E8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		FCF94C3A1C107D9A004D86E8 /* WQTTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTTool.h; sourceTree = "<group>"; };
+		FCF94C3B1C107D9A004D86E8 /* WQTTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				FCF94C361C106869004D86E8 /* WQTEventManager.h */,
 				FCF94C371C106869004D86E8 /* WQTEventManager.m */,
 				FCF94C391C107531004D86E8 /* Header.h */,
+				FCF94C3A1C107D9A004D86E8 /* WQTTool.h */,
+				FCF94C3B1C107D9A004D86E8 /* WQTTool.m */,
 			);
 			name = "自定义类";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */,
 				FC00ABC91C0F07550029AFCC /* main.m in Sources */,
 				FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */,
+				FCF94C3C1C107D9A004D86E8 /* WQTTool.m in Sources */,
 				FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

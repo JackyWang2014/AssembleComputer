@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F84FAEB7-BD9D-418B-A4E2-1A32780C2109</string>
 	<key>IDESourceControlProjectName</key>
-	<string>01-AssembleComputer</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BAB0F6EBD4422FF5AD6F67D723FF99F7F6EB0E2F</key>
 		<string>github.com:JackyWang2014/AssembleComputer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>01-AssembleComputer.xcodeproj</string>
+	<string>01-AssembleComputer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BAB0F6EBD4422FF5AD6F67D723FF99F7F6EB0E2F</key>

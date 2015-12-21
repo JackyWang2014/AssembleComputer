@@ -7,4 +7,6 @@
 //  Copyright (c) 2015年 QianFeng. All rights reserved.
 //
 
+#import "WQTTool.h"
+
 #define DEVICE_PROPERTY_NAMES @[@"cpu",@"memory",@"mainBoard",@"graphicsCard",@"voiceCard",@"box",@"hardDisk",@"keyboard",@"displayer"]
