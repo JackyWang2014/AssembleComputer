@@ -10,5 +10,7 @@
 #import "WQTDeviceItem.h"
 
 @implementation WQTDeviceItem
-
+- (NSString *)description {
+    return [NSString stringWithFormat:@"名称:%@ 参考价格:%@",self.name,self.price];
+}
 @end

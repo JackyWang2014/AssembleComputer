@@ -12,7 +12,9 @@
 #import "WQTEventManager.h"
 #import "WQTEventItem.h"
 #import "Header.h"
-
+#import "WQTURLItemManager.h"
+#import "WQTProductList.h"
+#import "WQTURLItem.h"
 enum {
     REFRESH, // 刷新当前配置
     CHOOSE_DEVICE
@@ -90,9 +92,19 @@ enum {
     printf("请依据设备编号选择设备:\n");
     scanf("%lu",&ctl);
     
-    //退出第二个界面
-    
-    
+    //推出第二个界面
+    WQTURLItem * urlItem = [WQTURLItemManager urlItemAtIndex:ctl];
+   
+    if (urlItem == nil) {
+        NSLog(@"输入错误,请重试");
+        return;
+    }
+    // 创建第二个界面
+    WQTProductList * productList = [[WQTProductList alloc] init];
+    // 设置标题和网址
+    productList.deviceName = [WQTTool translation:urlItem.deviceName];
+    productList.url = urlItem.url;
+    [productList refresh];
     
 }
 

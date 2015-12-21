@@ -12,6 +12,10 @@
 		FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD61C0F0E2E0029AFCC /* WQTResourceList.m */; };
 		FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */; };
 		FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */; };
+		FCC062E41C2796E700804907 /* WQTProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062E31C2796E700804907 /* WQTProductManager.m */; };
+		FCC062E71C27987400804907 /* WQTProductList.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062E61C27987400804907 /* WQTProductList.m */; };
+		FCC062EA1C279F0F00804907 /* WQTURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062E91C279F0F00804907 /* WQTURLItem.m */; };
+		FCC062F01C27A0C500804907 /* WQTURLItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062EF1C27A0C500804907 /* WQTURLItemManager.m */; };
 		FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C341C1067EE004D86E8 /* WQTEventItem.m */; };
 		FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C371C106869004D86E8 /* WQTEventManager.m */; };
 		FCF94C3C1C107D9A004D86E8 /* WQTTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C3B1C107D9A004D86E8 /* WQTTool.m */; };
@@ -40,6 +44,14 @@
 		FC00ABD91C0F0EB70029AFCC /* WQTResourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTResourceItem.m; sourceTree = "<group>"; };
 		FC00ABDC1C0F104E0029AFCC /* WQTDeviceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTDeviceItem.h; sourceTree = "<group>"; };
 		FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTDeviceItem.m; sourceTree = "<group>"; };
+		FCC062E21C2796E700804907 /* WQTProductManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTProductManager.h; sourceTree = "<group>"; };
+		FCC062E31C2796E700804907 /* WQTProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTProductManager.m; sourceTree = "<group>"; };
+		FCC062E51C27987400804907 /* WQTProductList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTProductList.h; sourceTree = "<group>"; };
+		FCC062E61C27987400804907 /* WQTProductList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTProductList.m; sourceTree = "<group>"; };
+		FCC062E81C279F0F00804907 /* WQTURLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTURLItem.h; sourceTree = "<group>"; };
+		FCC062E91C279F0F00804907 /* WQTURLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTURLItem.m; sourceTree = "<group>"; };
+		FCC062EE1C27A0C500804907 /* WQTURLItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTURLItemManager.h; sourceTree = "<group>"; };
+		FCC062EF1C27A0C500804907 /* WQTURLItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTURLItemManager.m; sourceTree = "<group>"; };
 		FCF94C331C1067EE004D86E8 /* WQTEventItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventItem.h; sourceTree = "<group>"; };
 		FCF94C341C1067EE004D86E8 /* WQTEventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTEventItem.m; sourceTree = "<group>"; };
 		FCF94C361C106869004D86E8 /* WQTEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventManager.h; sourceTree = "<group>"; };
@@ -102,6 +114,14 @@
 		FC00ABD01C0F0A750029AFCC /* 配件选取页面 */ = {
 			isa = PBXGroup;
 			children = (
+				FCC062E21C2796E700804907 /* WQTProductManager.h */,
+				FCC062E31C2796E700804907 /* WQTProductManager.m */,
+				FCC062E51C27987400804907 /* WQTProductList.h */,
+				FCC062E61C27987400804907 /* WQTProductList.m */,
+				FCC062E81C279F0F00804907 /* WQTURLItem.h */,
+				FCC062E91C279F0F00804907 /* WQTURLItem.m */,
+				FCC062EE1C27A0C500804907 /* WQTURLItemManager.h */,
+				FCC062EF1C27A0C500804907 /* WQTURLItemManager.m */,
 			);
 			name = "配件选取页面";
 			sourceTree = "<group>";
@@ -190,10 +210,14 @@
 				FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */,
 				FC00ABD41C0F0AA20029AFCC /* WQTRequest.m in Sources */,
 				FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */,
+				FCC062F01C27A0C500804907 /* WQTURLItemManager.m in Sources */,
 				FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */,
 				FC00ABC91C0F07550029AFCC /* main.m in Sources */,
 				FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */,
+				FCC062E41C2796E700804907 /* WQTProductManager.m in Sources */,
 				FCF94C3C1C107D9A004D86E8 /* WQTTool.m in Sources */,
+				FCC062E71C27987400804907 /* WQTProductList.m in Sources */,
+				FCC062EA1C279F0F00804907 /* WQTURLItem.m in Sources */,
 				FC00ABDA1C0F0EB70029AFCC /* WQTResourceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

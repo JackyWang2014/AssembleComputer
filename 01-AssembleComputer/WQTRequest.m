@@ -11,13 +11,15 @@
 @implementation WQTRequest
 - (void)requestDataFromPath:(NSString *)urlStr {
     
-    NSThread * thread = [[NSThread alloc] initWithTarget:self selector:@selector(download:canAuthenticateAgainstProtectionSpace:) object:urlStr];
+    NSThread * thread = [[NSThread alloc] initWithTarget:self selector:@selector(download:) object:urlStr];
     
     [thread start];
     
 }
 
 - (void)download:(NSString *)urlStr {
+    // 删除原有的编码格式,转成UTF8
+    urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL * url = [NSURL URLWithString:urlStr];
     NSData * data = [NSData dataWithContentsOfURL:url];
     // 回传数据
