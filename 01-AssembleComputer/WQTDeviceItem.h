@@ -14,6 +14,7 @@
 @property (nonatomic,copy) NSString * price; // 均价
 @property (nonatomic,copy) NSString * highPrice; // 高价
 @property (nonatomic,copy) NSString * lowPrice; // 低价
-@property (nonatomic,copy) NSString * fitType; // 使用
-@property (nonatomic,copy) NSString * mainFrequency;// 主频
+// 设置数据
+- (void)setDictionary:(NSDictionary *)dict;
+
 @end

@@ -10,9 +10,10 @@
 #import "WQTProductManager.h"
 #import "WQTDeviceItem.h"
 #import "WQTEventManager.h"
-
+#import "Header.h"
 enum {
- REFRESH
+ REFRESH,
+    CHOOSE
 };
 
 
@@ -22,8 +23,12 @@ enum {
     WQTRequest * _request; // 负责数据的请求
     // 负责当前页的事件管理
     WQTEventManager * _eventManager;
-
+    // 当前页是否退出
+    BOOL _isExit;
 }
+
+
+
 
 @end
 
@@ -31,9 +36,12 @@ enum {
 // 具体操作
 - (void)refresh {
     // 首先请求数据
-    NSLog(@"\n欢迎挑选所需%@",self.deviceName);
+   
+    NSLog(@"\n欢迎挑选所需%@",[WQTTool translation:self.deviceName]);
     [self requestData];
-    while (1) {
+    // 注册相关操作
+    [self registerEvents];
+    while (!_isExit) {
         printf("请选择操作:\n0.刷新列表\n1.选择产品\n");
         NSUInteger ctrl;
         scanf("%ld",&ctrl);
@@ -50,6 +58,7 @@ enum {
         _eventManager = [[WQTEventManager alloc] init];
     }
     [_eventManager addTarget:self action:@selector(requestData) event:REFRESH];
+    [_eventManager addTarget:self action:@selector(chooseProduct) event:CHOOSE];
 }
 
 #pragma mark - 数据请求
@@ -70,24 +79,29 @@ enum {
         _productManager = [[WQTProductManager alloc] init];
     }
     
+    // 这里应该将元数据清空
+    [_productManager clearAllProducts];
+    
     // 解析数据,存储数据
     NSArray * array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     
+    Class DeviceClass = NSClassFromString([WQTTool classNameFromDeviceName:self.deviceName]);
+    
     for (NSDictionary * dict in array) {
         // 每个字典是一个产品
-        WQTDeviceItem * item = [[WQTDeviceItem alloc] init];
-        item.proid = dict[@"proId"];
-        item.name = dict[@"name"];
-        item.price = dict[@"price"];
-        item.highPrice = dict[@"highPrice"];
-        item.lowPrice = dict[@"lowPrice"];
-        item.fitType = dict[@"baseParam"][@"适用类型"][@"1"];
+        WQTDeviceItem * item = [[DeviceClass alloc] init];
+        // 这里如果是cpu对象,调用的就是cpu的setDictionary:方法
+        [item setDictionary:dict];
+
         // 添加到数据源
         [_productManager addProduct:item];
     }
     
     [self showProducts];
 }
+
+// 尝试赋值
+
 
 - (void)requestFailed:(NSString *)error {
     NSLog(@"下载失败:%@",error);
@@ -117,11 +131,11 @@ enum {
     WQTDeviceItem * item = [_productManager productAtIndex:index - 1];
     
     // 回传产品 通过协议或者block回调
+    // 同时回传设备名
+    [self.delegate chosedDevice:item deviceName:self.deviceName];
     
-    
-    
-    
-    
+    // 回传数据之后,当前页返回
+    _isExit = YES;
 }
 
 @end

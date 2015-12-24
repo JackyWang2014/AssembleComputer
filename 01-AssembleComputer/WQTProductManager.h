@@ -14,6 +14,8 @@
 // 返回所有产品
 - (NSArray *)allProducts;
 
+// 清空所有的产品
+- (void)clearAllProducts;
 // 返回单个产品
 - (WQTDeviceItem *)productAtIndex:(NSUInteger)index;
 @end

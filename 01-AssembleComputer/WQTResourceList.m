@@ -25,6 +25,8 @@ enum {
     WQTResourceItem * _resourceItem;
     // 管理当前页所有的操作
     WQTEventManager * _eventManager;
+   
+    
 }
 
 @end
@@ -101,12 +103,32 @@ enum {
     }
     // 创建第二个界面
     WQTProductList * productList = [[WQTProductList alloc] init];
-    // 设置标题和网址
-    productList.deviceName = [WQTTool translation:urlItem.deviceName];
+     // 建立代理联系
+    productList.delegate = self;
+     // 设置标题和网址
+    productList.deviceName = urlItem.deviceName;
     productList.url = urlItem.url;
     [productList refresh];
     
+    // 第二个界面返回
+    [self reloadSource];
+    
 }
 
+#pragma mark - productListDelegate协议方法的实现
+// 获得被选择的设备
+- (void)chosedDevice:(WQTDeviceItem *)item deviceName:(NSString *)deviceName {
+    // deviceName源自resourceItem的属性
+    NSString * setMethod = [self setMethodNameFromPropertyName:deviceName];
+    [_resourceItem performSelector:NSSelectorFromString(setMethod) withObject:item];
+}
 
+- (NSString *)setMethodNameFromPropertyName:(NSString *)
+                                             proName {
+                                                 // 取出第一个字符
+    unichar c = [proName characterAtIndex:0];
+    c = toupper(c);// 小写字符转大写,如果已经是大写,或者不是字母,不变
+    NSString * newStr = [NSString stringWithFormat:@"set%C%@:",c,[proName substringFromIndex:1]];
+    return newStr;
+}
 @end

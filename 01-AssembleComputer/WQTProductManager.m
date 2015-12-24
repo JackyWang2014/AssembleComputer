@@ -35,6 +35,10 @@
     return _array;
 }
 
+- (void)clearAllProducts {
+    [_array removeAllObjects];
+}
+
 // 返回单个产品
 - (WQTDeviceItem *)productAtIndex:(NSUInteger)index {
     if (index >= _array.count) {

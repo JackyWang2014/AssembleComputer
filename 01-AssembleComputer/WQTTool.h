@@ -11,4 +11,6 @@
 @interface WQTTool : NSObject
 /**翻译*/
 + (NSString *)translation:(NSString *)eng;
+// 通过设备名,返回对应对象
++ (NSString *)classNameFromDeviceName:(NSString *)deviceName;
 @end

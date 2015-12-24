@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WQTProductList.h"
 /**下载配置清单,管理配置清单,显示配置清单,操作配置清单 */
-@interface WQTResourceList : NSObject
+@interface WQTResourceList : NSObject <WQTProductListDelegate>
 
 // 页面运行 刷新
 - (void)refresh;

@@ -16,6 +16,9 @@
 		FCC062E71C27987400804907 /* WQTProductList.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062E61C27987400804907 /* WQTProductList.m */; };
 		FCC062EA1C279F0F00804907 /* WQTURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062E91C279F0F00804907 /* WQTURLItem.m */; };
 		FCC062F01C27A0C500804907 /* WQTURLItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062EF1C27A0C500804907 /* WQTURLItemManager.m */; };
+		FCC062F31C28EA6F00804907 /* WQTCpuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062F21C28EA6F00804907 /* WQTCpuItem.m */; };
+		FCC062F61C28EAA400804907 /* WQTMemoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062F51C28EAA400804907 /* WQTMemoryItem.m */; };
+		FCC062F91C28EAAF00804907 /* WQTMainboardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC062F81C28EAAF00804907 /* WQTMainboardItem.m */; };
 		FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C341C1067EE004D86E8 /* WQTEventItem.m */; };
 		FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C371C106869004D86E8 /* WQTEventManager.m */; };
 		FCF94C3C1C107D9A004D86E8 /* WQTTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF94C3B1C107D9A004D86E8 /* WQTTool.m */; };
@@ -52,6 +55,12 @@
 		FCC062E91C279F0F00804907 /* WQTURLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTURLItem.m; sourceTree = "<group>"; };
 		FCC062EE1C27A0C500804907 /* WQTURLItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTURLItemManager.h; sourceTree = "<group>"; };
 		FCC062EF1C27A0C500804907 /* WQTURLItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTURLItemManager.m; sourceTree = "<group>"; };
+		FCC062F11C28EA6F00804907 /* WQTCpuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTCpuItem.h; sourceTree = "<group>"; };
+		FCC062F21C28EA6F00804907 /* WQTCpuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTCpuItem.m; sourceTree = "<group>"; };
+		FCC062F41C28EAA400804907 /* WQTMemoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTMemoryItem.h; sourceTree = "<group>"; };
+		FCC062F51C28EAA400804907 /* WQTMemoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTMemoryItem.m; sourceTree = "<group>"; };
+		FCC062F71C28EAAF00804907 /* WQTMainboardItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTMainboardItem.h; sourceTree = "<group>"; };
+		FCC062F81C28EAAF00804907 /* WQTMainboardItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTMainboardItem.m; sourceTree = "<group>"; };
 		FCF94C331C1067EE004D86E8 /* WQTEventItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventItem.h; sourceTree = "<group>"; };
 		FCF94C341C1067EE004D86E8 /* WQTEventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTEventItem.m; sourceTree = "<group>"; };
 		FCF94C361C106869004D86E8 /* WQTEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTEventManager.h; sourceTree = "<group>"; };
@@ -147,6 +156,12 @@
 			children = (
 				FC00ABDC1C0F104E0029AFCC /* WQTDeviceItem.h */,
 				FC00ABDD1C0F104E0029AFCC /* WQTDeviceItem.m */,
+				FCC062F11C28EA6F00804907 /* WQTCpuItem.h */,
+				FCC062F21C28EA6F00804907 /* WQTCpuItem.m */,
+				FCC062F41C28EAA400804907 /* WQTMemoryItem.h */,
+				FCC062F51C28EAA400804907 /* WQTMemoryItem.m */,
+				FCC062F71C28EAAF00804907 /* WQTMainboardItem.h */,
+				FCC062F81C28EAAF00804907 /* WQTMainboardItem.m */,
 			);
 			name = "通用数据模型";
 			sourceTree = "<group>";
@@ -207,14 +222,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC062F91C28EAAF00804907 /* WQTMainboardItem.m in Sources */,
 				FCF94C351C1067EE004D86E8 /* WQTEventItem.m in Sources */,
 				FC00ABD41C0F0AA20029AFCC /* WQTRequest.m in Sources */,
 				FC00ABDE1C0F104E0029AFCC /* WQTDeviceItem.m in Sources */,
 				FCC062F01C27A0C500804907 /* WQTURLItemManager.m in Sources */,
 				FCF94C381C106869004D86E8 /* WQTEventManager.m in Sources */,
 				FC00ABC91C0F07550029AFCC /* main.m in Sources */,
+				FCC062F61C28EAA400804907 /* WQTMemoryItem.m in Sources */,
 				FC00ABD71C0F0E2E0029AFCC /* WQTResourceList.m in Sources */,
 				FCC062E41C2796E700804907 /* WQTProductManager.m in Sources */,
+				FCC062F31C28EA6F00804907 /* WQTCpuItem.m in Sources */,
 				FCF94C3C1C107D9A004D86E8 /* WQTTool.m in Sources */,
 				FCC062E71C27987400804907 /* WQTProductList.m in Sources */,
 				FCC062EA1C279F0F00804907 /* WQTURLItem.m in Sources */,

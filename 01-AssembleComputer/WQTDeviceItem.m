@@ -13,4 +13,12 @@
 - (NSString *)description {
     return [NSString stringWithFormat:@"名称:%@ 参考价格:%@",self.name,self.price];
 }
+
+- (void)setDictionary:(NSDictionary *)dict {
+    self.proid = dict[@"proId"];
+    self.name = dict[@"name"];
+    self.price = dict[@"price"];
+    self.highPrice = dict[@"highPrice"];
+    self.lowPrice = dict[@"lowPrice"];
+}
 @end

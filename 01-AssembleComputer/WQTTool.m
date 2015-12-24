@@ -18,4 +18,15 @@
     }
     return eng;
 }
+
+// 通过设备名,返回对应对象
++ (NSString *)classNameFromDeviceName:(NSString *)deviceName {
+    NSDictionary * dic = @{
+                           @"cpu" : @"WQTCpuItem",
+                           @"memory" : @"WQTMemoryItem",
+                           @"mainBoard" : @"WQTMainboardItem"
+                           };
+    return dic[deviceName];
+}
+
 @end
